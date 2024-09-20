@@ -4,6 +4,7 @@
 >(base) me@pc REPOS % mkdir repo_prueba  
 >(base) me@pc REPOS % cd repo_prueba  
 >```
+
 >```console
 >(base) me@pc repo_prueba % git init  
 >```
