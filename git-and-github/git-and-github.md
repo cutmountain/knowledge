@@ -1,14 +1,19 @@
 # Git & GitHub cheat sheet
 
->```sh
+>```console
 >(base) me@pc REPOS % mkdir repo_prueba  
 >(base) me@pc REPOS % cd repo_prueba  
+>```
+>```console
 >(base) me@pc repo_prueba % git init  
 >```
-`Initialized empty Git repository in /REPOS/repo_prueba/.git/`
+
+```
+Initialized empty Git repository in /REPOS/repo_prueba/.git/
+```
 
 
->```sh
+>```console
 >(base) me@pc repo_prueba % touch README.md
 >```
 
@@ -20,9 +25,9 @@ Add "README.md" file to git's _**staging area**_:
 >```
 
 
-Tell git to everything in the _**staging area**_ (N.B. This will create a _**point in time**_ in the history of your current branch):
+Tell git to commig everything in the _**staging area**_ (n.b. This will create a _**point in time**_ in the history of your current branch):
 
->```sh
+>```console
 >(base) me@pc repo_prueba % git commit -m "Primer commit"
 >```
 ```
@@ -41,13 +46,15 @@ Omit --global to set the identity only in this repository.
 fatal: unable to auto-detect email address (got 'me@pc.(none)')
 ```
 
->```sh
->(base) me@pc repo_prueba % git config --global user.email "email-of-your-GitHub-account@mail.com"
->(base) me@pc repo_prueba % git config --global user.name "your-GitHub-username"
+>```console
+>(base) me@pc repo_prueba % git config --global user.email email-of-your-GitHub-account@mail.com
+>```console
+>```
+>(base) me@pc repo_prueba % git config --global user.name your-GitHub-username
 >```
 
       
->```sh
+>```console
 >(base) me@pc repo_prueba % git commit -m "Primer commit"     
 >```
 ```
@@ -62,7 +69,7 @@ Date:   Thu Sep 12 11:55:54 2024 +0200
     Primer commit
 ```
 
->```sh
+>```console
 >(base) me@pc repo_prueba % touch file1.md
 >(base) me@pc repo_prueba % git add file1.md
 >(base) me@pc repo_prueba % git commit -m "Segundo commit"
@@ -73,7 +80,7 @@ Date:   Thu Sep 12 11:55:54 2024 +0200
  create mode 100644 file1.md
 ``` 
 
->```sh
+>```console
 >(base) me@pc repo_prueba % touch file2.md
 >(base) me@pc repo_prueba % git add file2.md
 >(base) me@pc repo_prueba % git commit -m "Tercer commit"
@@ -85,7 +92,7 @@ Date:   Thu Sep 12 11:55:54 2024 +0200
 ```
 
 
->```sh
+>```console
 >(base) me@pc repo_prueba % git log
 >```
 ```
@@ -110,31 +117,33 @@ Date:   Thu Sep 12 11:55:54 2024 +0200
 
 Check your remote **references**:
 
->```sh
+>```console
 >(base) me@pc repo_prueba % git remote 
 >```
 
 Add a reference to a remote origin and name it (typically) "origin":
->```sh
+>```console
 >(base) me@pc repo_prueba % git remote add origin https://github.com/your-github-username/repo_prueba.git
 >```
 
 Check again your remote **references**:
->```sh
+>```console
 >(base) me@pc repo_prueba % git remote
->origin
->```
+```
+origin
+```
 
 Check your **local** branches (* indicates the branch you are in --i.e.current **local** branch--):
 
->```sh
+>```console
 >(base) me@pc repo_prueba % git branch
->* main
->```
+```
+* main
+```
 
 Push your commited changes in your _local_ repository to the _remote_ repository (option -u sets your current _local_ branch to track the _remote_ --i.e. upstream-- "main" branch in your remote reference "origin"):
 
->```sh
+>```console
 >(base) me@pc repo_prueba % git push -u origin main
 >```
 ```
@@ -154,7 +163,7 @@ branch 'main' set up to track 'origin/main'.
 
 Check that a _remote_ branch has been created with the same name as your _local_ branch:
 
->```sh
+>```console
 >(base) me@pc repo_prueba % git branch -r
 >```
 ```
@@ -162,7 +171,7 @@ Check that a _remote_ branch has been created with the same name as your _local_
 ```
 
 
->```sh
+>```console
 >(base) me@pc repo_prueba % git status
 >```
 ```
@@ -173,7 +182,7 @@ nothing to commit, working tree clean
 
 Grab changes made in the _remote_ repository:
 
->```sh
+>```console
 >(base) me@pc repo_prueba % git pull origin
 >```
 ```
