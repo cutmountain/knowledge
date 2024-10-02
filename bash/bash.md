@@ -85,4 +85,8 @@ Delete file:
 >(base) me@pc knowledge % rm example.txt
 >```
 
+Execute file:
 
+>```console
+>(base) me@pc knowledge % bash forloop.sh
+>```
