@@ -49,8 +49,9 @@ fatal: unable to auto-detect email address (got 'me@pc.(none)')
 
 >```console
 >(base) me@pc repo_prueba % git config --global user.email email-of-your-GitHub-account@mail.com
->```console
 >```
+
+>```console
 >(base) me@pc repo_prueba % git config --global user.name your-GitHub-username
 >```
 
